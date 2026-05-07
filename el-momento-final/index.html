@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Momento Islamabad — Best Steakhouse</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Lato:wght@300;400;700&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="#" class="nav-logo">
+    <img src="https://elmomento.pk/wp-content/uploads/2022/11/Logo.png" alt="El Momento" onerror="this.outerHTML='<span style=\'font-family:Playfair Display,serif;font-size:22px;color:#d4a843;letter-spacing:0.1em;\'>El Momento</span>'">
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#reservation">Reserve</a></li>
+  </ul>
+  <a href="#reservation" class="nav-reserve">Book a Table</a>
+  <div class="hamburger" onclick="toggleMob()"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mobMenu" style="display:none;position:fixed;inset:0;background:rgba(15,11,8,0.98);z-index:300;flex-direction:column;align-items:center;justify-content:center;gap:36px;">
+  <button onclick="toggleMob()" style="position:absolute;top:24px;right:28px;background:none;border:none;color:var(--cream);font-size:28px;cursor:pointer;">✕</button>
+  <a href="#about" onclick="toggleMob()" style="font-family:'Playfair Display',serif;font-size:32px;color:var(--cream);text-decoration:none;">About</a>
+  <a href="#menu" onclick="toggleMob()" style="font-family:'Playfair Display',serif;font-size:32px;color:var(--cream);text-decoration:none;">Menu</a>
+  <a href="#reviews" onclick="toggleMob()" style="font-family:'Playfair Display',serif;font-size:32px;color:var(--cream);text-decoration:none;">Reviews</a>
+  <a href="#reservation" onclick="toggleMob()" style="font-family:'Playfair Display',serif;font-size:32px;color:var(--fire);text-decoration:none;">Book a Table</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-logo">
+      <img src="https://elmomento.pk/wp-content/uploads/2022/11/Logo.png" alt="El Momento" onerror="this.style.display='none'">
+    </div>
+    <div class="hero-eyebrow">Islamabad's Finest Steakhouse · Beverly Centre, F-6</div>
+    <h1 class="hero-headline">
+      Where Every
+      <span class="fire-word">Bite Ignites</span>
+    </h1>
+    <p class="hero-tagline">Authentic steaks, unforgettable moments</p>
+    <div class="hero-divider">
+      <div class="line"></div>
+      <div class="dot" style="background:var(--fire)"></div>
+      <div class="dot" style="background:var(--gold2)"></div>
+      <div class="dot" style="background:var(--fire)"></div>
+      <div class="line"></div>
+    </div>
+    <div class="hero-btns">
+      <a href="#menu" class="btn-fire">Explore Our Menu</a>
+      <a href="#reservation" class="btn-outline">Book a Table</a>
+    </div>
+  </div>
+  <div class="hero-scroll" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+    <div class="mouse"><div class="mouse-wheel"></div></div>
+    <span>Scroll Down</span>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-strip">
+  <div class="marquee-inner">
+    <span>🥩 Tomahawk Steak</span><span class="sep">|</span><span>🦞 Grilled Lobster</span><span class="sep">|</span><span>🔥 Filet Mignon</span><span class="sep">|</span><span>🍤 Tiger Prawn</span><span class="sep">|</span><span>🥩 Surf n Turf</span><span class="sep">|</span><span>🍝 Seafood Pasta</span><span class="sep">|</span><span>🐟 Pink Salmon</span><span class="sep">|</span><span>🥗 Caesar Salad</span><span class="sep">|</span><span>🍗 Cordon Bleu</span><span class="sep">|</span><span>🥩 Rib-Eye au Jus</span><span class="sep">|</span>
+    <span>🥩 Tomahawk Steak</span><span class="sep">|</span><span>🦞 Grilled Lobster</span><span class="sep">|</span><span>🔥 Filet Mignon</span><span class="sep">|</span><span>🍤 Tiger Prawn</span><span class="sep">|</span><span>🥩 Surf n Turf</span><span class="sep">|</span><span>🍝 Seafood Pasta</span><span class="sep">|</span><span>🐟 Pink Salmon</span><span class="sep">|</span><span>🥗 Caesar Salad</span><span class="sep">|</span><span>🍗 Cordon Bleu</span><span class="sep">|</span><span>🥩 Rib-Eye au Jus</span><span class="sep">|</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <div class="section-wrap">
+    <div class="about-grid">
+      <div class="about-images sr-l">
+        <img class="about-img-main" src="https://images.unsplash.com/photo-1600891964092-4316c288032e?w=800&q=85" alt="Steak dish">
+        <img class="about-img-accent" src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=500&q=85" alt="Restaurant interior">
+        <div class="about-badge"><div class="bnum">#1</div><div class="blbl">Steakhouse ISB</div></div>
+      </div>
+      <div class="about-text-col sr-r">
+        <div class="tag-line">Our Story</div>
+        <h2 class="about-h2">Islamabad's Premier <em>Steakhouse</em> Experience</h2>
+        <p class="about-p">El Momento is the <strong>best steakhouse in Islamabad</strong> that offers quality steaks in a great environment. Nestled at Beverly Centre on Jinnah Avenue, we've created a sanctuary for those who live for great food.</p>
+        <p class="about-p">We serve various steaks, including premium <strong>imported cuts</strong> such as Rib-Eye, Filet Mignon, and T-Bone — aged to perfection and prepared by passionate chefs who treat every plate as a masterpiece.</p>
+        <div class="about-features">
+          <div class="feat-item"><div class="feat-icon">🥩</div>Imported Premium Cuts</div>
+          <div class="feat-item"><div class="feat-icon">🦞</div>Fresh Deep Ocean Seafood</div>
+          <div class="feat-item"><div class="feat-icon">🍷</div>Cozy Fine Dining Ambiance</div>
+          <div class="feat-item"><div class="feat-icon">👨‍🍳</div>Expert Culinary Team</div>
+        </div>
+        <div class="stats-row">
+          <div class="stat-item"><div class="stat-num">50+</div><div class="stat-lbl">Menu Items</div></div>
+          <div class="stat-item"><div class="stat-num">3+</div><div class="stat-lbl">Years Serving</div></div>
+          <div class="stat-item"><div class="stat-num">★4.7</div><div class="stat-lbl">Avg Rating</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIALTIES -->
+<section class="spec-section">
+  <div class="section-wrap">
+    <div class="spec-header sr">
+      <div class="tag-line" style="justify-content:center;">Chef's Selection</div>
+      <h2 class="section-title">Our <em>Signature</em> Dishes</h2>
+      <p class="section-sub">From fire-kissed steaks to ocean-fresh seafood — every dish is an experience</p>
+    </div>
+    <div class="spec-grid sr">
+      <div class="spec-card">
+        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=700&q=80" alt="Tomahawk Steak">
+        <div class="spec-overlay">
+          <div class="spec-tag">🔥 Signature Cut</div>
+          <div class="spec-name">Tomahawk Steak</div>
+          <div class="spec-price">RS 5,599</div>
+          <div class="spec-desc">700g bone-in beast with your choice of sauce. Pure showmanship on a plate.</div>
+        </div>
+      </div>
+      <div class="spec-card">
+        <img src="https://images.unsplash.com/photo-1615361200141-f45040f367be?w=700&q=80" alt="Grilled Lobster">
+        <div class="spec-overlay">
+          <div class="spec-tag">🦞 Deep Ocean</div>
+          <div class="spec-name">Grilled Lobster</div>
+          <div class="spec-price">RS 9,545</div>
+          <div class="spec-desc">Grilled lobster with roasted mushroom, garden salad & Italian risotto rice.</div>
+        </div>
+      </div>
+      <div class="spec-card">
+        <img src="https://images.unsplash.com/photo-1611599538835-b52a8c2f9236?w=700&q=80" alt="Filet Mignon">
+        <div class="spec-overlay">
+          <div class="spec-tag">⭐ Imported</div>
+          <div class="spec-name">Filet Mignon</div>
+          <div class="spec-price">RS 15,499</div>
+          <div class="spec-desc">Our signature Filet Mignon au poivre — the pinnacle of fine dining.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu-section" id="menu">
+  <div class="section-wrap">
+    <div class="spec-header sr" style="margin-bottom:50px;">
+      <div class="tag-line" style="justify-content:center;">Full Menu</div>
+      <h2 class="section-title">A Symphony of <em>Flavors</em></h2>
+      <p class="section-sub">Every dish crafted with passion — from light bites to the boldest cuts on the grill</p>
+    </div>
+    <div class="menu-tabs-bar">
+      <button class="mtab active" onclick="switchTab('soups',this)"><span class="micon">🥣</span>Soups &amp; Salads</button>
+      <button class="mtab" onclick="switchTab('starters',this)"><span class="micon">🍤</span>Starters</button>
+      <button class="mtab" onclick="switchTab('steak',this)"><span class="micon">🥩</span>Steaks</button>
+      <button class="mtab" onclick="switchTab('chicken',this)"><span class="micon">🍗</span>Chicken</button>
+      <button class="mtab" onclick="switchTab('pasta',this)"><span class="micon">🍝</span>Pasta</button>
+      <button class="mtab" onclick="switchTab('seafood',this)"><span class="micon">🦞</span>Deep Ocean</button>
+    </div>
+    <div class="mpanel active" id="tab-soups"><div class="menu-grid">
+      <div class="mcard"><div class="mcard-emoji">🥣</div><div class="mcard-body"><div class="mcard-name">El Momento Special Soup</div><div class="mcard-desc">Rich soup featuring chicken, prawns, black mushrooms and fresh seasonal vegetables</div><div class="mcard-footer"><div class="mcard-price">RS 699</div><div class="mcard-badge badge-popular">Popular</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🍲</div><div class="mcard-body"><div class="mcard-name">Seafood Chowder</div><div class="mcard-desc">Prawn, fish, parmesan cheese served with garlic bread</div><div class="mcard-footer"><div class="mcard-price">RS 895</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🍄</div><div class="mcard-body"><div class="mcard-name">Cream Of Mushroom</div><div class="mcard-desc">Blended fresh mushroom creamy soup served with garlic bread</div><div class="mcard-footer"><div class="mcard-price">RS 795</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🌶️</div><div class="mcard-body"><div class="mcard-name">Thai Chicken Soup</div><div class="mcard-desc">Clear chicken soup with green chilies and lemon, enhanced with crispy rice</div><div class="mcard-footer"><div class="mcard-price">RS 595</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🍜</div><div class="mcard-body"><div class="mcard-name">Hot N Sour</div><div class="mcard-desc">All time favourite — prepared in chicken broth with chicken and chinese seasonal vegetables</div><div class="mcard-footer"><div class="mcard-price">RS 595</div><div class="mcard-badge badge-popular">Popular</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🌽</div><div class="mcard-body"><div class="mcard-name">Chicken Corn Soup</div><div class="mcard-desc">Crushed sweet corn cooked in chicken broth</div><div class="mcard-footer"><div class="mcard-price">RS 595</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🍅</div><div class="mcard-body"><div class="mcard-name">Pomodoro Soup</div><div class="mcard-desc">Fresh tomato, fresh basil, croutons served with garlic bread</div><div class="mcard-footer"><div class="mcard-price">RS 595</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🥗</div><div class="mcard-body"><div class="mcard-name">Caesar Salad</div><div class="mcard-desc">Fresh iceberg in chives oil dressing, topped with grilled chicken and parmesan</div><div class="mcard-footer"><div class="mcard-price">RS 1,395</div><div class="mcard-badge badge-popular">Popular</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🥙</div><div class="mcard-body"><div class="mcard-name">Quinoa Chickpea Salad</div><div class="mcard-desc">Tomato quinoa chickpea, cucumber, onion and feta dressing</div><div class="mcard-footer"><div class="mcard-price">RS 1,795</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🥩</div><div class="mcard-body"><div class="mcard-name">Italian Beef Salad</div><div class="mcard-desc">Multi capsicum, iceberg and beef salad with vinegar dressing</div><div class="mcard-footer"><div class="mcard-price">RS 1,595</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🫓</div><div class="mcard-body"><div class="mcard-name">Loaded Hummus</div><div class="mcard-desc">Hummus with grilled chicken chunks, olives, and chickpea</div><div class="mcard-footer"><div class="mcard-price">RS 1,595</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🥦</div><div class="mcard-body"><div class="mcard-name">Clear Vegetable Soup</div><div class="mcard-desc">A light, clean vegetable broth soup</div><div class="mcard-footer"><div class="mcard-price">RS 595</div></div></div></div>
+    </div></div>
+    <div class="mpanel" id="tab-starters"><div class="menu-grid">
+      <div class="mcard"><div class="mcard-emoji">🍤</div><div class="mcard-body"><div class="mcard-name">Dynamite Prawns</div><div class="mcard-desc">Fried battered prawns with crunchy iceberg and dynamite sauce</div><div class="mcard-footer"><div class="mcard-price">RS 1,995</div><div class="mcard-badge badge-popular">Popular</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🍤</div><div class="mcard-body"><div class="mcard-name">Prawn Tempura</div><div class="mcard-desc">Fried battered prawns with fruit salsa and asian spice sauce</div><div class="mcard-footer"><div class="mcard-price">RS 2,195</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🍗</div><div class="mcard-body"><div class="mcard-name">Boneless Wings</div><div class="mcard-desc">Chicken wings, doritos, chili, and sriracha sauce</div><div class="mcard-footer"><div class="mcard-price">RS 1,195</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🔥</div><div class="mcard-body"><div class="mcard-name">Dynamite Chicken</div><div class="mcard-desc">Crispy chicken coated with rich creamy sriracha mayo</div><div class="mcard-footer"><div class="mcard-price">RS 1,295</div><div class="mcard-badge badge-popular">Popular</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🍗</div><div class="mcard-body"><div class="mcard-name">Buffalo Wings</div><div class="mcard-desc">Crumbed fried wings tossed in hot fire sauce, served with fries</div><div class="mcard-footer"><div class="mcard-price">RS 1,195</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🐟</div><div class="mcard-body"><div class="mcard-name">Baby Finger Fish</div><div class="mcard-desc">Crumbed fried fish served with french fries and tartar sauce</div><div class="mcard-footer"><div class="mcard-price">RS 1,595</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🌮</div><div class="mcard-body"><div class="mcard-name">El Nacho</div><div class="mcard-desc">Crispy tortilla chips loaded with melted cheese, grilled chicken, iceberg, salsa and sour cream</div><div class="mcard-footer"><div class="mcard-price">RS 1,499</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🍗</div><div class="mcard-body"><div class="mcard-name">Chicken Strips</div><div class="mcard-desc">Crispy fried chicken strip loin served with rich garlic sauce and french fries</div><div class="mcard-footer"><div class="mcard-price">RS 1,395</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🥟</div><div class="mcard-body"><div class="mcard-name">Steamed Dumplings (6 pcs)</div><div class="mcard-desc">Steamed dumplings filled with chicken mince</div><div class="mcard-footer"><div class="mcard-price">RS 1,495</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🍯</div><div class="mcard-body"><div class="mcard-name">Spicy Honey Bee Wings</div><div class="mcard-desc">Batter fried wings glazed with honey chilli sauce</div><div class="mcard-footer"><div class="mcard-price">RS 1,295</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🍟</div><div class="mcard-body"><div class="mcard-name">Fries Basket</div><div class="mcard-desc">Crispy fries served with garlic mayo</div><div class="mcard-footer"><div class="mcard-price">RS 595</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🐟</div><div class="mcard-body"><div class="mcard-name">Fish Cracker Basket</div><div class="mcard-desc">Light and crispy fish crackers</div><div class="mcard-footer"><div class="mcard-price">RS 395</div></div></div></div>
+    </div></div>
+    <div class="mpanel" id="tab-steak"><div class="menu-grid">
+      <div class="mcard"><div class="mcard-emoji">🍖</div><div class="mcard-body"><div class="mcard-name">Tomahawk Steak</div><div class="mcard-desc">700g bone-in beef steak, sauce of your choice. An absolute showstopper</div><div class="mcard-footer"><div class="mcard-price">RS 5,599</div><div class="mcard-badge badge-popular">🔥 Best Seller</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🥩</div><div class="mcard-body"><div class="mcard-name">T-Bone (Local)</div><div class="mcard-desc">Rich, juicy T-Bone steak topped with garlic butter sauce. A must-try!</div><div class="mcard-footer"><div class="mcard-price">RS 5,599</div><div class="mcard-badge badge-popular">Popular</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🥩</div><div class="mcard-body"><div class="mcard-name">Surf n Turf Steak</div><div class="mcard-desc">Beef steak (180-200g) with creamy spinach and garlic pepper sauce</div><div class="mcard-footer"><div class="mcard-price">RS 3,499</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🦐</div><div class="mcard-body"><div class="mcard-name">Boeuf Tiger Prawn</div><div class="mcard-desc">Grilled beef steak (250-280g) with tiger prawn, served with spicy sambal sauce</div><div class="mcard-footer"><div class="mcard-price">RS 3,499</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🍄</div><div class="mcard-body"><div class="mcard-name">The Wild Boeuf</div><div class="mcard-desc">Homemade marinated tenderloin beef topped with brown wild mushroom sauce</div><div class="mcard-footer"><div class="mcard-price">RS 3,299</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🌶️</div><div class="mcard-body"><div class="mcard-name">Fire Mexican Steak</div><div class="mcard-desc">The most tender and delicious juicy beef topped with spicy mexican sauce</div><div class="mcard-footer"><div class="mcard-price">RS 3,299</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🥩</div><div class="mcard-body"><div class="mcard-name">Beef Burnt Steak</div><div class="mcard-desc">Beef steak (280-300g) served with burnt butter sauce</div><div class="mcard-footer"><div class="mcard-price">RS 3,299</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">⚫</div><div class="mcard-body"><div class="mcard-name">Steak au Poivre</div><div class="mcard-desc">Black pepper crusted beef, grilled to perfection with a decadent black pepper sauce</div><div class="mcard-footer"><div class="mcard-price">RS 3,299</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🫙</div><div class="mcard-body"><div class="mcard-name">Boeuf Grasa De Cordero</div><div class="mcard-desc">Beef steak (280-300g) served with spinach artichoke dip and fresh mushroom sauce</div><div class="mcard-footer"><div class="mcard-price">RS 3,299</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">⭐</div><div class="mcard-body"><div class="mcard-name">Filet Mignon (Imported)</div><div class="mcard-desc">Our signature Filet Mignon au poivre with fresh herbs and bold flavor</div><div class="mcard-footer"><div class="mcard-price">RS 15,499</div><div class="mcard-badge badge-imported">Imported</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">⭐</div><div class="mcard-body"><div class="mcard-name">T-Bone Steak (Imported)</div><div class="mcard-desc">Tender grass-fed beef, dry aged to perfection, served with sautéed vegetables</div><div class="mcard-footer"><div class="mcard-price">RS 16,999</div><div class="mcard-badge badge-imported">Imported</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">⭐</div><div class="mcard-body"><div class="mcard-name">Rib-Eye Steak au Jus (Imported)</div><div class="mcard-desc">Rich demiglace with your choice of sides and roasted vegetables</div><div class="mcard-footer"><div class="mcard-price">RS 16,499</div><div class="mcard-badge badge-imported">Imported</div></div></div></div>
+    </div></div>
+    <div class="mpanel" id="tab-chicken"><div class="menu-grid">
+      <div class="mcard"><div class="mcard-emoji">🍗</div><div class="mcard-body"><div class="mcard-name">Napoleon Stuffed Chicken</div><div class="mcard-desc">Deep fried chicken stuffed with mushroom & cheese, topped with creamy marroqui sauce</div><div class="mcard-footer"><div class="mcard-price">RS 2,495</div><div class="mcard-badge badge-popular">Popular</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🍋</div><div class="mcard-body"><div class="mcard-name">Lemon Rosemary Grilled Chicken</div><div class="mcard-desc">Tender grilled chicken topped with fresh lemon rosemary sauce</div><div class="mcard-footer"><div class="mcard-price">RS 2,295</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🌶️</div><div class="mcard-body"><div class="mcard-name">Mexican Chicken</div><div class="mcard-desc">Tender grilled chicken topped with spicy mexican sauce</div><div class="mcard-footer"><div class="mcard-price">RS 2,395</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🧀</div><div class="mcard-body"><div class="mcard-name">Schnitzel Cordon Bleu</div><div class="mcard-desc">Hand breaded crispy chicken stuffed with turkey & cheese, topped with mushroom sauce</div><div class="mcard-footer"><div class="mcard-price">RS 2,695</div><div class="mcard-badge badge-popular">Popular</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🍄</div><div class="mcard-body"><div class="mcard-name">Poulet Mushroom</div><div class="mcard-desc">Tender grilled chicken topped with creamy fresh mushroom sauce</div><div class="mcard-footer"><div class="mcard-price">RS 2,295</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🍅</div><div class="mcard-body"><div class="mcard-name">Poulet Marroqui</div><div class="mcard-desc">Tender grilled chicken topped with cherry tomato and spicy marroqui sauce</div><div class="mcard-footer"><div class="mcard-price">RS 2,395</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🧀</div><div class="mcard-body"><div class="mcard-name">Cheesy Stuffed Chicken</div><div class="mcard-desc">Tender fried chicken stuffed with flavour cheese, topped with orange cheese sauce</div><div class="mcard-footer"><div class="mcard-price">RS 2,695</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🌿</div><div class="mcard-body"><div class="mcard-name">Creamy Tarragon Chicken</div><div class="mcard-desc">Tender grilled chicken topped with fresh tarragon sauce</div><div class="mcard-footer"><div class="mcard-price">RS 2,295</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🫑</div><div class="mcard-body"><div class="mcard-name">Jalapeño Chicken</div><div class="mcard-desc">Grilled marinated chicken topped with jalapeño sauce, mashed potatoes and brown rice</div><div class="mcard-footer"><div class="mcard-price">RS 2,395</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">⚫</div><div class="mcard-body"><div class="mcard-name">Black Pepper Chicken</div><div class="mcard-desc">Grilled marinated chicken topped with black pepper sauce, mashed potatoes and brown rice</div><div class="mcard-footer"><div class="mcard-price">RS 2,295</div></div></div></div>
+    </div></div>
+    <div class="mpanel" id="tab-pasta"><div class="menu-grid">
+      <div class="mcard"><div class="mcard-emoji">🍝</div><div class="mcard-body"><div class="mcard-name">Pesto Pasta</div><div class="mcard-desc">Homemade spaghetti and creamy basil pesto, grilled chicken topped with fresh pesto layer</div><div class="mcard-footer"><div class="mcard-price">RS 1,695</div><div class="mcard-badge badge-popular">Popular</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🍝</div><div class="mcard-body"><div class="mcard-name">Alfredo Pasta</div><div class="mcard-desc">Fettuccine tossed in alfredo creamy sauce and grilled chicken</div><div class="mcard-footer"><div class="mcard-price">RS 1,695</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🍝</div><div class="mcard-body"><div class="mcard-name">Penne Arrabbiata</div><div class="mcard-desc">Penne pasta, grilled chicken, roasted tomato sauce, extra virgin oil, garlic bread and parmesan</div><div class="mcard-footer"><div class="mcard-price">RS 1,695</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🍄</div><div class="mcard-body"><div class="mcard-name">Mushroom Pasta</div><div class="mcard-desc">Penne pasta tossed in creamy mushroom cheese sauce served with grilled chicken</div><div class="mcard-footer"><div class="mcard-price">RS 1,495</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🧀</div><div class="mcard-body"><div class="mcard-name">Mac n Cheese Pasta</div><div class="mcard-desc">Macaroni pasta toasted in creamy cheese sauce, topped with grilled chicken</div><div class="mcard-footer"><div class="mcard-price">RS 1,495</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🦐</div><div class="mcard-body"><div class="mcard-name">Sea Food Pasta</div><div class="mcard-desc">Shrimps, prawns and savory parmesan sautéed in a rich creamy Spanish-inspired sauce</div><div class="mcard-footer"><div class="mcard-price">RS 2,195</div><div class="mcard-badge badge-popular">Popular</div></div></div></div>
+    </div></div>
+    <div class="mpanel" id="tab-seafood"><div class="menu-grid">
+      <div class="mcard"><div class="mcard-emoji">🐟</div><div class="mcard-body"><div class="mcard-name">Pink Salmon</div><div class="mcard-desc">Special pink salmon served with chef's special sauce & risotto rice</div><div class="mcard-footer"><div class="mcard-price">RS 6,999</div><div class="mcard-badge badge-popular">Popular</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🐟</div><div class="mcard-body"><div class="mcard-name">Lemon Butter Red Snapper</div><div class="mcard-desc">Grilled red snapper topped with caper garlic sauce, vegetables and risotto rice</div><div class="mcard-footer"><div class="mcard-price">RS 3,195</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🌿</div><div class="mcard-body"><div class="mcard-name">Herbs Butter Red Snapper</div><div class="mcard-desc">Grilled snapper topped with herb butter sauce, vegetables and risotto rice</div><div class="mcard-footer"><div class="mcard-price">RS 2,945</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🐟</div><div class="mcard-body"><div class="mcard-name">Grilled Sole</div><div class="mcard-desc">Marinated grilled sole topped with green pepper corn sauce, seasonal vegetables and risotto rice</div><div class="mcard-footer"><div class="mcard-price">RS 2,745</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🦐</div><div class="mcard-body"><div class="mcard-name">Tiger Prawn</div><div class="mcard-desc">Grilled tiger prawn topped with garlic lemon butter sauce, vegetables and Italian risotto rice</div><div class="mcard-footer"><div class="mcard-price">RS 4,999</div><div class="mcard-badge badge-popular">Popular</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🦞</div><div class="mcard-body"><div class="mcard-name">Grilled Lobster</div><div class="mcard-desc">Grilled lobster with roasted mushroom, garden green salad & risotto rice</div><div class="mcard-footer"><div class="mcard-price">RS 9,545</div><div class="mcard-badge badge-popular">🔥 Chef's Choice</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🦞</div><div class="mcard-body"><div class="mcard-name">Thermidor Lobster</div><div class="mcard-desc">Grilled lobster with creamy thermidor sauce, sautéed veggies, and risotto rice</div><div class="mcard-footer"><div class="mcard-price">RS 9,999</div></div></div></div>
+      <div class="mcard"><div class="mcard-emoji">🐟</div><div class="mcard-body"><div class="mcard-name">Fish N Chips</div><div class="mcard-desc">Deep fried battered sole served with tartar sauce and french fries</div><div class="mcard-footer"><div class="mcard-price">RS 1,995</div></div></div></div>
+    </div></div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="experience-section">
+  <div class="exp-bg"></div>
+  <div class="section-wrap">
+    <div class="spec-header sr" style="text-align:center;">
+      <div class="tag-line" style="justify-content:center;">The El Momento Way</div>
+      <h2 class="section-title">More Than a <em>Meal</em></h2>
+    </div>
+    <div class="exp-grid sr">
+      <div class="exp-card"><span class="exp-icon">🥩</span><div class="exp-title">Premium Cuts</div><div class="exp-text">From local specialties to imported Rib-Eye, Filet Mignon and T-Bone — each cut is selected for maximum flavor and quality.</div></div>
+      <div class="exp-card"><span class="exp-icon">🔥</span><div class="exp-title">Expert Grillmasters</div><div class="exp-text">Our chefs understand that the perfect steak is a science — temperature, timing, and technique combine to create magic on the plate.</div></div>
+      <div class="exp-card"><span class="exp-icon">🏰</span><div class="exp-title">Prime Location</div><div class="exp-text">Located in the iconic Beverly Centre on Jinnah Avenue, Islamabad — a destination worth the journey, every single time.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section" id="reviews">
+  <div class="section-wrap">
+    <div class="spec-header sr" style="text-align:center;margin-bottom:40px;">
+      <div class="tag-line" style="justify-content:center;">Customer Reviews</div>
+      <h2 class="section-title">What Our Guests <em>Say</em></h2>
+    </div>
+    <div class="rating-summary sr">
+      <div class="rating-big">4.7</div>
+      <div class="rating-details">
+        <div class="rating-stars-row"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <div class="rating-count">Based on 500+ reviews across platforms</div>
+      </div>
+      <div class="platforms">
+        <div class="platform-badge"><span class="picon">🌍</span><div><div class="pname">TripAdvisor</div><div class="prating">★ 4.5</div></div></div>
+        <div class="platform-badge"><span class="picon">🗺️</span><div><div class="pname">Google</div><div class="prating">★ 4.7</div></div></div>
+        <div class="platform-badge"><span class="picon">📘</span><div><div class="pname">Facebook</div><div class="prating">★ 4.8</div></div></div>
+      </div>
+    </div>
+    <div class="reviews-carousel sr">
+      <div class="reviews-track" id="reviewsTrack">
+        <div class="review-card"><div class="review-quote">"</div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">Absolutely incredible experience! The Tomahawk steak was perfectly cooked and presented like a piece of art. The ambiance is dark and cozy — exactly what you'd want from a steakhouse. Will definitely be back!</div><div class="review-author"><div class="review-avatar">A</div><div><div class="review-name">Ahmed Raza</div><div class="review-meta">Islamabad · Verified Diner</div></div><div class="review-platform">Google</div></div></div>
+        <div class="review-card"><div class="review-quote">"</div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">Best steakhouse in Islamabad, hands down. The Filet Mignon was out of this world — melt-in-your-mouth tender. Staff was attentive and the whole experience felt premium. Highly recommended!</div><div class="review-author"><div class="review-avatar">S</div><div><div class="review-name">Sara Malik</div><div class="review-meta">F-7 Islamabad · Regular Guest</div></div><div class="review-platform">TripAdvisor</div></div></div>
+        <div class="review-card"><div class="review-quote">"</div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">Took my wife here for our anniversary and they truly delivered. The Thermidor Lobster was divine. This place sets the bar high for fine dining in the capital.</div><div class="review-author"><div class="review-avatar">U</div><div><div class="review-name">Usman Khan</div><div class="review-meta">DHA Islamabad · Special Occasion</div></div><div class="review-platform">Google</div></div></div>
+        <div class="review-card"><div class="review-quote">"</div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">The Dynamite Prawns starter alone is worth the visit — crispy, saucy, and addictive. Followed by the Surf n Turf and I was in heaven. Great service and a really beautiful setting inside Beverly Centre.</div><div class="review-author"><div class="review-avatar">F</div><div><div class="review-name">Fatima Zaidi</div><div class="review-meta">G-11 Islamabad · Food Blogger</div></div><div class="review-platform">Facebook</div></div></div>
+        <div class="review-card"><div class="review-quote">"</div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span></div><div class="review-text">Visited for a team lunch and everyone was impressed. The menu is extensive and caters to all tastes. The Caesar Salad was fresh and the Chicken Cordon Bleu was outstanding. One of Islamabad's best!</div><div class="review-author"><div class="review-avatar">H</div><div><div class="review-name">Hassan Abbasi</div><div class="review-meta">Blue Area ISB · Corporate Client</div></div><div class="review-platform">TripAdvisor</div></div></div>
+        <div class="review-card"><div class="review-quote">"</div><div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="review-text">If you haven't tried the Pink Salmon here you are truly missing out. The risotto it comes with is perfectly seasoned. This restaurant has consistency and quality nailed down. My go-to for a nice dinner.</div><div class="review-author"><div class="review-avatar">M</div><div><div class="review-name">Maham Iqbal</div><div class="review-meta">E-7 Islamabad · Frequent Visitor</div></div><div class="review-platform">Google</div></div></div>
+      </div>
+    </div>
+    <div class="carousel-nav">
+      <button class="carousel-btn" onclick="moveCarousel(-1)">←</button>
+      <div class="carousel-dots" id="carouselDots"></div>
+      <button class="carousel-btn" onclick="moveCarousel(1)">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- HOURS -->
+<div class="hours-bar">
+  <div class="hours-inner">
+    <div class="hours-block sr"><h4>📍 Location</h4><p>Beverly Centre, Jinnah Ave, F-6</p></div>
+    <div class="hours-sep"></div>
+    <div class="hours-block sr d1"><h4>🕐 Mon – Sun</h4><p>12:00 PM — 12:00 AM</p></div>
+    <div class="hours-sep"></div>
+    <div class="hours-block sr d2"><h4>📞 Call Us</h4><p><a href="tel:03111100317" style="color:var(--fire);text-decoration:none;">0311 1100317</a></p></div>
+    <div class="hours-sep"></div>
+    <div class="hours-block sr d3"><h4>✉ Email</h4><p><a href="mailto:info@elmomento.pk" style="color:var(--cream);text-decoration:none;">info@elmomento.pk</a></p></div>
+  </div>
+</div>
+
+<!-- RESERVATION -->
+<section class="reservation-section" id="reservation">
+  <div class="res-left">
+    <div class="res-left-content">
+      <div class="tag-line" style="color:var(--fire);">Reserve Your Table</div>
+      <h3>Make Your <em>Moment</em> Unforgettable</h3>
+      <p>Whether it's a romantic evening, a family celebration, or a business dinner — we're ready to make it memorable.</p>
+      <div class="contact-items">
+        <div class="contact-item"><div class="ci-icon">📍</div><span>Beverly Centre, Jinnah Avenue, F-6/1 Blue Area, Islamabad</span></div>
+        <div class="contact-item"><div class="ci-icon">📞</div><a href="tel:03111100317">0311 1100317</a></div>
+        <div class="contact-item"><div class="ci-icon">✉</div><a href="mailto:info@elmomento.pk">info@elmomento.pk</a></div>
+        <div class="contact-item"><div class="ci-icon">🕐</div><span>Open Daily: 12:00 PM – 12:00 AM</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="res-right">
+    <h3>Book a Table</h3>
+    <p class="sub">Fill out the form and we'll confirm your reservation shortly</p>
+    <div class="fgrid">
+      <div class="fg"><label>Full Name</label><input type="text" placeholder="Your full name"></div>
+      <div class="fg"><label>Phone Number</label><input type="tel" placeholder="+92 3XX XXXXXXX"></div>
+      <div class="fg"><label>Email Address</label><input type="email" placeholder="your@email.com"></div>
+      <div class="fg"><label>Number of Guests</label><select><option>1 Guest</option><option>2 Guests</option><option>3–4 Guests</option><option>5–6 Guests</option><option>7+ Guests</option></select></div>
+      <div class="fg"><label>Preferred Date</label><input type="date"></div>
+      <div class="fg"><label>Preferred Time</label><input type="time" value="19:00"></div>
+      <div class="fg full"><label>Special Requests / Occasion</label><textarea placeholder="Birthday, anniversary, dietary needs, seating preferences..."></textarea></div>
+      <button class="btn-book" onclick="submitBooking()">Confirm My Reservation 🎉</button>
+      <div class="book-success" id="bookSuccess">✅ Reservation sent! We'll contact you shortly to confirm. Looking forward to seeing you!</div>
+    </div>
+  </div>
+</section>
+
+<!-- GOOGLE MAP -->
+<section style="background:var(--dark);padding:90px 0 0;position:relative;overflow:hidden;">
+  <div style="text-align:center;padding:0 60px;margin-bottom:50px;">
+    <div style="display:inline-flex;align-items:center;gap:10px;font-size:10px;letter-spacing:0.4em;text-transform:uppercase;color:var(--fire);font-weight:700;margin-bottom:18px;">
+      <span style="width:30px;height:2px;background:var(--fire);display:block;"></span>Find Us
+    </div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(34px,5vw,60px);font-weight:700;color:var(--cream);line-height:1.2;">We're Right <em style="color:var(--gold2);font-style:italic;">Here</em></h2>
+    <p style="font-size:15px;color:var(--warm-gray);margin-top:12px;max-width:520px;margin-left:auto;margin-right:auto;line-height:1.8;">Shop #06, Ground Floor, Beverly Centre, 1 Jinnah Ave, F-6/1 Blue Area, Islamabad, 44000</p>
+  </div>
+  <div style="position:relative;width:100%;border-top:1px solid rgba(212,168,67,0.15);border-bottom:1px solid rgba(212,168,67,0.15);">
+    <!-- Floating info badge -->
+    <div style="position:absolute;top:28px;left:50%;transform:translateX(-50%);z-index:10;background:rgba(15,11,8,0.95);border:1px solid rgba(224,92,26,0.45);border-radius:6px;padding:16px 24px;display:flex;align-items:center;gap:14px;min-width:300px;box-shadow:0 8px 32px rgba(0,0,0,0.55);backdrop-filter:blur(8px);">
+      <span style="font-size:28px;flex-shrink:0;">📍</span>
+      <div style="display:flex;flex-direction:column;gap:3px;">
+        <strong style="font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:var(--cream);">El Momento Islamabad</strong>
+        <span style="font-size:12px;color:var(--warm-gray);">Beverly Centre, F-6/1 Blue Area, Islamabad</span>
+        <a href="https://goo.gl/maps/PgTuwo3mGTvYfsQ38" target="_blank" style="font-size:11px;color:var(--fire);text-decoration:none;letter-spacing:0.05em;margin-top:4px;">Open in Google Maps ↗</a>
+      </div>
+    </div>
+    <!-- Google Maps Embed -->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3318.8491822!2d73.05346!3d33.72891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38dfbef1abffffff%3A0xc4f30a4ba70dd2a!2sBeverly%20Centre%2C%20Jinnah%20Ave%2C%20Islamabad%2C%20Islamabad%20Capital%20Territory%2C%20Pakistan!5e0!3m2!1sen!2spk!4v1700000000000!5m2!1sen!2spk"
+      width="100%"
+      height="480"
+      style="border:0;display:block;filter:grayscale(35%) contrast(1.1) brightness(0.8);"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="El Momento Islamabad — Beverly Centre, Jinnah Avenue">
+    </iframe>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="section-wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="https://elmomento.pk/wp-content/uploads/2022/11/Logo.png" alt="El Momento" onerror="this.style.display='none'">
+        <p>El Momento Steakhouse is the premier destination for steak lovers in Islamabad. Sleek ambiance, unforgettable flavors, and an ever-momentous dining experience await you.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/Elmomento.pk" class="fsoc" target="_blank">f</a>
+          <a href="https://www.instagram.com/elmomento.isb/" class="fsoc" target="_blank">ig</a>
+          <a href="https://www.tiktok.com/@elmomento.pk" class="fsoc" target="_blank">tt</a>
+          <a href="https://www.youtube.com/channel/UCoKC-5snZQxxvjKNjTiOJXg" class="fsoc" target="_blank">yt</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Quick Links</h4><a href="#about">About Us</a><a href="#menu">Full Menu</a><a href="#reviews">Reviews</a><a href="#reservation">Reserve a Table</a><a href="https://elmomento.pk/gallery/" target="_blank">Gallery</a><a href="https://elmomento.pk/blog/" target="_blank">Blog</a></div>
+      <div class="footer-col"><h4>Islamabad</h4><p>Beverly Centre<br>Jinnah Avenue, F-6/1<br>Blue Area, Islamabad</p><a href="tel:03111100317">0311 1100317</a><a href="mailto:info@elmomento.pk">info@elmomento.pk</a><p style="margin-top:8px;">Mon–Sun: 12 PM – 12 AM</p></div>
+      <div class="footer-col"><h4>Lahore</h4><p>Ground Floor, Bldg 43-L2<br>Mini Market, MM Alam Rd<br>Block L Gulberg 2, Lahore</p><a href="tel:03111100315">0311 1100315</a><a href="mailto:info@elmomento.pk">info@elmomento.pk</a></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 El Momento Steakhouse. All rights reserved.</span>
+      <span>Made with ❤️ for food lovers in Islamabad</span>
+    </div>
+  </div>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
